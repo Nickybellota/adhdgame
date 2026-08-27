@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #9bbc0f;
+    font-family: 'Bytesized', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 40px;
+    gap: 30px;
+}
+
+h1{
+    font-size: 10px;
+    color: #0f380f;
+    background-color: #c4cfa1;
+    border: 3px solid #0f380f;
+    border-radius: 6px;
+    padding: 20px;
+    max-width: 320px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#batterie {
+    display: flex;
+    gap: 4px;
+    background-color: #c4cfa1;
+    border: 4px dashed #0f380f;
+    border-radius: 6px;
+    padding: 8px;
+    position: relative;
+}
+
+#batterie::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    background-color: #0f380f;
+    border-radius: 3px;
+}
+
+#batterie::after {
+    content: "";
+    position: absolute;
+    right: -12px;  
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    background-color: #0f380f;
+    border-radius: 3px;
+}
+
+.segment {
+    width: 20px;
+    height: 45px;
+    background-color: #c4cfa1;
+    color: #9bbc0f;
+    border: 3px solid #0f380f;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#fortschritt-button {
+    font-family: 'Bytesized', cursive;
+    font-size: 16px;
+    background-color: #0f380f;
+    color: #9bbc0f;
+    border: 3px solid #0f380f;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#fortschritt-button:hover {
+    background-color: #306230;
+}
+
+/* Versteckt Elemente mit dieser Klasse komplett */
+.versteckt {
+    display: none;
+}
+
+/* Die Überraschungsbox, im gleichen Dialogbox-Stil wie die Überschrift */
+#ueberraschung {
+    font-size: 18px;
+    color: #0f380f;
+    background-color: #c4cfa1;
+    border: 3px solid #0f380f;
+    border-radius: 6px;
+    padding: 20px;
+    max-width: 320px;
+    text-align: center;
+}
+
+#ueberraschung a {
+    color: #0f380f;
+    font-weight: bold;
+}
+
+/* Die Blink-Animation selbst: definiert, WIE sich etwas verändert */
+@keyframes blinken {
+    0%   { opacity: 1; }    /* voll sichtbar */
+    50%  { opacity: 0.3; }  /* fast unsichtbar, in der Mitte der Animation */
+    100% { opacity: 1; }    /* wieder voll sichtbar */
+}
+
+/* Das Segment, das gerade dran ist, bekommt diese Klasse und blinkt */
+.naechstes {
+    animation: blinken 1s infinite;  /* 1 Sekunde pro Durchlauf, endlos wiederholt */
+    cursor: pointer;                  /* zeigt "hier klicken" durch die Hand-Maus an */
+}
+
+/* Segmente, die noch nicht dran sind, sollen keinen Klick-Cursor zeigen */
+.segment {
+    cursor: default;
+}
