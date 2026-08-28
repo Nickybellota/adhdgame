@@ -4,6 +4,9 @@ const batterie = document.getElementById("batterie");
 const ueberraschung = document.getElementById("ueberraschung");
 
 const resetButton = document.getElementById("reset-button");
+const startText = document.getElementById("start-text");
+const ueberraschungText = document.getElementById("ueberraschung-text");
+const ueberraschungLink = document.getElementById("ueberraschung-link");
 
 // Wie viele Segmente die Batterie insgesamt haben soll
 const anzahlSegmente = 10;
@@ -30,6 +33,28 @@ function erstelleSegmente() {
     }
 }
 
+// Schreibt einen Text Buchstabe für Buchstabe in ein Element
+// "element" = wo der Text erscheinen soll
+// "text" = der komplette Text, der geschrieben werden soll
+// "fertig" = eine optionale Funktion, die läuft, sobald alles geschrieben ist
+function schreibeText(element, text, fertig) {
+        // Zählt, beim wievielten Buchstaben wir gerade sind
+    let position = 0
+
+    function naechsterBuchstabe() {
+        if (position < text.length) {
+            element.textContent = text.substring(0, position + 1);
+            position = + 1
+
+            setTimeout(naechsterBuchstabe, 40);
+        }
+        else if (fertig) {
+            fertig();
+        }
+    }
+    naechsterBuchstabe();
+}
+ 
 // Wird aufgerufen, wenn ein Segment mit Index "index" angeklickt wird
 function segmentAnklicken(index) {
     // Nur reagieren, falls GENAU das nächste, dran-fällige Segment geklickt wurde
@@ -89,7 +114,10 @@ function aktualisiereBlinken() {
 function zeigeUeberraschung() {
     // Entfernt die Klasse "versteckt", dadurch wird der Bereich sichtbar
     ueberraschung.classList.remove("versteckt");
-    resetButton.classList.remove("versteckt")
+    resetButton.classList.remove("versteckt");
+    schreibeText(ueberraschungText; "So fleißig! Du hast eine Überraschung freigeschaltet.", function(){
+        ueberraschucngLink.classList.remove("versteckt");
+    });
 }
 
 // Speichert den aktuellen Fortschritt in localStorage
@@ -127,6 +155,7 @@ function ladeFortschritt() {
 erstelleSegmente();
 // Läuft sofort danach: stellt ggf. gespeicherten Fortschritt wieder her
 ladeFortschritt();
+schreibeText(startText; "Diese Batterie ist dein ADHD Helper. Gehe zum Sport und klicke das Element an, um das Geheimnis zu lüften!");
 
 function zuruecksetzen() {
     
