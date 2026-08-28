@@ -115,7 +115,7 @@ function zeigeUeberraschung() {
     // Entfernt die Klasse "versteckt", dadurch wird der Bereich sichtbar
     ueberraschung.classList.remove("versteckt");
     resetButton.classList.remove("versteckt");
-    schreibeText(ueberraschungText; "So fleißig! Du hast eine Überraschung freigeschaltet.", function(){
+    schreibeText(ueberraschungText, "So fleißig! Du hast eine Überraschung freigeschaltet.", function(){
         ueberraschucngLink.classList.remove("versteckt");
     });
 }
@@ -155,7 +155,7 @@ function ladeFortschritt() {
 erstelleSegmente();
 // Läuft sofort danach: stellt ggf. gespeicherten Fortschritt wieder her
 ladeFortschritt();
-schreibeText(startText; "Diese Batterie ist dein ADHD Helper. Gehe zum Sport und klicke das Element an, um das Geheimnis zu lüften!");
+schreibeText(startText, "Diese Batterie ist dein ADHD Helper. Gehe zum Sport und klicke das Element an, um das Geheimnis zu lüften!");
 
 function zuruecksetzen() {
     
@@ -175,4 +175,3 @@ resetButton.addEventListener("click", zuruecksetzen);
 
                           
                     
-
