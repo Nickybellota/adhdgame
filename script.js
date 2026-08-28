@@ -3,7 +3,7 @@ const batterie = document.getElementById("batterie");
 // Holt den versteckten Überraschungs-Bereich
 const ueberraschung = document.getElementById("ueberraschung");
 
-const resetButton = document.getElementbyId("reset-button");
+const resetButton = document.getElementById("reset-button");
 
 // Wie viele Segmente die Batterie insgesamt haben soll
 const anzahlSegmente = 10;
