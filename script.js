@@ -44,7 +44,7 @@ function schreibeText(element, text, fertig) {
     function naechsterBuchstabe() {
         if (position < text.length) {
             element.textContent = text.substring(0, position + 1);
-            position = + 1
+            position = position + 1
 
             setTimeout(naechsterBuchstabe, 40);
         }
@@ -116,7 +116,7 @@ function zeigeUeberraschung() {
     ueberraschung.classList.remove("versteckt");
     resetButton.classList.remove("versteckt");
     schreibeText(ueberraschungText, "So fleißig! Du hast eine Überraschung freigeschaltet.", function(){
-        ueberraschucngLink.classList.remove("versteckt");
+        ueberraschungLink.classList.remove("versteckt");
     });
 }
 
