@@ -6,6 +6,8 @@ const ueberraschung = document.getElementById("ueberraschung");
 // Wie viele Segmente die Batterie insgesamt haben soll
 const anzahlSegmente = 10;
 
+const reset Button = document.getElementbyId("reset-button");
+
 // Zählt, wie viele Segmente aktuell gefüllt sind (startet bei 0)
 let gefuellteSegmente = 0;
 
@@ -87,6 +89,7 @@ function aktualisiereBlinken() {
 function zeigeUeberraschung() {
     // Entfernt die Klasse "versteckt", dadurch wird der Bereich sichtbar
     ueberraschung.classList.remove("versteckt");
+    resetButton.classList.remove("versteckt")
 }
 
 // Speichert den aktuellen Fortschritt in localStorage
@@ -124,3 +127,23 @@ function ladeFortschritt() {
 erstelleSegmente();
 // Läuft sofort danach: stellt ggf. gespeicherten Fortschritt wieder her
 ladeFortschritt();
+
+function zuruecksetzen() {
+    
+    localStorage.removeItem("akkuFortschritt");
+    gefuellteSegmente = 0;
+    const alleSegmente = document.querySelectorAll(".segment");
+    alleSegmente.forEach(function(segment) {
+                       segment.classList.remove("gefuellt");
+                       segment.classList.remove("naechstes");
+                   });
+    ueberraschung.classList.add("versteckt");
+    resetButton.classList.add("versteckt");
+    aktualisiereBlinken();
+}
+
+resetButton.addEventListener("click", zuruecksetzen);
+
+                          
+                    
+
