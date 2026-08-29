@@ -72,6 +72,10 @@ h1{
     cursor: pointer;
 }
 
+.segment.gefuellt {
+    background-color: #0f380f;
+}
+
 #fortschritt-button {
     font-family: 'Bytesized', cursive;
     font-size: 16px;
