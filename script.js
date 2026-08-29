@@ -71,7 +71,7 @@ function segmentAnklicken(index) {
     // Holt sich ALLE Segmente als Liste
     const alleSegmente = document.querySelectorAll(".segment");
     // Wählt das gerade geklickte Segment aus
-    const geklicktesSegment = alleSegmente[gefuellteSegmente];
+    const geklicktesSegment = alleSegmente[gefuellteSegmente - 1];
 
     // Füllt es optisch (dunkle Farbe)
     geklicktesSegment.classList.add("gefuellt");
