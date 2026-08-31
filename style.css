@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-.press-start-2p-regular {
-  font-family: "Press Start 2P", system-ui;
+.tiny5-regular {
+  font-family: "Tiny5", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -65,7 +65,7 @@ h1 {
 }
 
 h2{
-    font-family: "Press Start 2P";
+    font-family: "Tiny5", sans-serif;
     font-size: 25px;
     color: #0f380f;
     text-align: center;
@@ -121,7 +121,7 @@ h2{
 }
 
 #fortschritt-button {
-    font-family: "Press Start 2P", cursive;
+    font-family: "Tiny5", sans-serif;
     font-size: 16px;
     background-color: #0f380f;
     color: #9bbc0f;
@@ -146,7 +146,7 @@ h2{
 }
 
 #reset-button {
-    font-family: "Press Start 2P", cursive;
+    font-family: "Tiny5", sans-serif;
     font-size: 16px;
     background-color: #0f380f;
     color: #9bbc0f;
