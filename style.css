@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
     background-color: #c4cfa1;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-    font-family: 'Bytesized', cursive;
+    font-family: "Press Start 2P", cursive;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,6 +65,7 @@ h1 {
 }
 
 h2{
+    font-family: "Press Start 2P";
     font-size: 25px;
     color: #0f380f;
     text-align: center;
@@ -114,7 +121,7 @@ h2{
 }
 
 #fortschritt-button {
-    font-family: 'Bytesized', cursive;
+    font-family: "Press Start 2P", cursive;
     font-size: 16px;
     background-color: #0f380f;
     color: #9bbc0f;
@@ -139,7 +146,7 @@ h2{
 }
 
 #reset-button {
-    font-family: 'Bytesized', cursive;
+    font-family: "Press Start 2P", cursive;
     font-size: 16px;
     background-color: #0f380f;
     color: #9bbc0f;
