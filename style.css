@@ -16,6 +16,12 @@ body {
     gap: 30px;
 }
 
+h1 {
+    font-size: 16px;
+    color: #0f380f;
+    text-align: center;
+}    
+
 /* Neue, gemeinsame Klasse für den Game-Boy-Dialogbox-Look */
 .dialogbox {
     color: #0f380f;
