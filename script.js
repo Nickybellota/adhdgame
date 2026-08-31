@@ -68,7 +68,6 @@ function segmentAnklicken(index) {
         return;
     }
 
-const geklicktesSegment = alleSegmente[gefuellteSegmente];
     // Holt sich ALLE Segmente als Liste
     const alleSegmente = document.querySelectorAll(".segment");
     // Wählt das gerade geklickte Segment aus
