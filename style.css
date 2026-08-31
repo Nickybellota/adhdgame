@@ -16,22 +16,46 @@ body {
     gap: 30px;
 }
 
-h2{
-    font-size: 25px;
-    color: #0f380f;
-    text-align: center;
-}
-
-h1{
-    font-size: 16px;
+/* Neue, gemeinsame Klasse für den Game-Boy-Dialogbox-Look */
+.dialogbox {
     color: #0f380f;
     background-color: #c4cfa1;
     border: 3px solid #0f380f;
-    border-radius: 6px;
+    outline: 2px solid #0f380f;    /* der ZWEITE, äußere Rahmen */
+    outline-offset: 4px;            /* Abstand zwischen den beiden Rahmen */
+    border-radius: 4px;
     padding: 20px;
     max-width: 320px;
     text-align: center;
     line-height: 1.5;
+    position: relative;             /* nötig, damit die Ecken-Kreise sich daran ausrichten */
+    margin: 4px;                     /* Platz, damit der Outline nicht abgeschnitten wird */
+}
+
+/* Vier kleine Kreise an den Ecken, per Mehrfach-Hintergrund erzeugt */
+.dialogbox::before {
+    content: "";
+    position: absolute;
+    inset: -6px;                     /* zieht das Pseudo-Element gleichmäßig über alle 4 Seiten hinaus */
+    background-image:
+        radial-gradient(circle, #0f380f 45%, transparent 46%),
+        radial-gradient(circle, #0f380f 45%, transparent 46%),
+        radial-gradient(circle, #0f380f 45%, transparent 46%),
+        radial-gradient(circle, #0f380f 45%, transparent 46%);
+    background-repeat: no-repeat;
+    background-size: 8px 8px;
+    background-position:
+        0 0,
+        100% 0,
+        0 100%,
+        100% 100%;
+    pointer-events: none;            /* damit der Kreis-Layer keine Klicks blockiert */
+}
+
+h2{
+    font-size: 25px;
+    color: #0f380f;
+    text-align: center;
 }
 
 #batterie {
@@ -101,18 +125,6 @@ h1{
 /* Versteckt Elemente mit dieser Klasse komplett */
 .versteckt {
     display: none;
-}
-
-/* Die Überraschungsbox, im gleichen Dialogbox-Stil wie die Überschrift */
-#ueberraschung {
-    font-size: 18px;
-    color: #0f380f;
-    background-color: #c4cfa1;
-    border: 3px solid #0f380f;
-    border-radius: 6px;
-    padding: 20px;
-    max-width: 320px;
-    text-align: center;
 }
 
 #ueberraschung a {
