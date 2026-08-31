@@ -156,7 +156,7 @@ function ladeFortschritt() {
 erstelleSegmente();
 // Läuft sofort danach: stellt ggf. gespeicherten Fortschritt wieder her
 ladeFortschritt();
-schreibeText(startText, "Diese Batterie ist dein ADHD Helper. Gehe zum Sport und klicke das Element an, um das Geheimnis zu lüften!");
+schreibeText(startText, "Diese Batterie ist dein ADHD Helper. Für jedes Workout darfst du ein Feld füllen. Ist der Akku voll, wird dein Geheimnis gelüftet! Happy Sweating");
 
 function zuruecksetzen() {
     
