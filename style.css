@@ -17,6 +17,12 @@ body {
 }
 
 h1{
+    font-size: 25px;
+    color: #0f380f;
+    text-align: center;
+}
+
+h2{
     font-size: 16px;
     color: #0f380f;
     background-color: #c4cfa1;
