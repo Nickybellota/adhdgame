@@ -2,7 +2,8 @@
 const batterie = document.getElementById("batterie");
 // Holt den versteckten Überraschungs-Bereich
 const ueberraschung = document.getElementById("ueberraschung");
-
+// Holt das Audio-Element aus dem DOM
+const hintergrundmusik = document.getElementById("hintergrundmusik");
 const resetButton = document.getElementById("reset-button");
 const startText = document.getElementById("start-text");
 const ueberraschungText = document.getElementById("ueberraschung-text");
@@ -173,5 +174,9 @@ function zuruecksetzen() {
 
 resetButton.addEventListener("click", zuruecksetzen);
 
-                          
+// Startet die Musik beim allerersten Klick irgendwo auf der Seite
+// "once: true" sorgt dafür, dass dieser Listener sich nach dem ERSTEN Mal selbst entfernt
+document.addEventListener("click", function() {
+    hintergrundmusik.play();
+}, { once: true });                          
                     
