@@ -116,7 +116,7 @@ function zeigeUeberraschung() {
     // Entfernt die Klasse "versteckt", dadurch wird der Bereich sichtbar
     ueberraschung.classList.remove("versteckt");
     resetButton.classList.remove("versteckt");
-    schreibeText(ueberraschungText, "So fleißig! Du hast eine Überraschung freigeschaltet.", function(){
+    schreibeText(ueberraschungText, "So fleißig! Du hast eine Überraschung freigeschaltet. Löse sie bei Nici mit dem Code 6PackU ein", function(){
         ueberraschungLink.classList.remove("versteckt");
     });
 }
